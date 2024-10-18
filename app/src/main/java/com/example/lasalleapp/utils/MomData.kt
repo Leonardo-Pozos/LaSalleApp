@@ -1,6 +1,7 @@
 package com.example.lasalleapp.utils
 
 import com.example.lasalleapp.models.Community
+import com.example.lasalleapp.models.Materia
 import com.example.lasalleapp.models.News
 
 val newsList = listOf(
@@ -30,5 +31,13 @@ val communities = listOf(
     Community(3, "https://www.lasallebajio.edu.mx/comunidad/images/tile_cat_souv_22.jpg"),
     Community(4, "https://www.lasallebajio.edu.mx/comunidad/images/tile_tramites.jpg"),
     Community(5, "https://www.lasallebajio.edu.mx/comunidad/images/tile_blog.jpg"),
+)
+
+val materias = listOf(
+    Materia(1, "Matematicas", 9.3, 9.5, 8.8, 9.9),
+    Materia(2, "Quimica", 9.3, 9.5, 8.8, 9.7),
+    Materia(3, "Fisica", 9.3, 9.5, 8.8, 8.9),
+    Materia(4, "Geografia", 9.3, 9.5, 8.8, 9.5),
+    Materia(5, "Historia", 9.3, 9.5, 8.8, 9.5),
 )
 

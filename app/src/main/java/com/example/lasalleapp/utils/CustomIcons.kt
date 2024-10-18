@@ -248,3 +248,77 @@ public val CashCoin: ImageVector
     }
 
 private var _CashCoin: ImageVector? = null
+
+
+
+public val Format_paint: ImageVector
+    get() {
+        if (_Format_paint != null) {
+            return _Format_paint!!
+        }
+        _Format_paint = ImageVector.Builder(
+            name = "Format_paint",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 960f,
+            viewportHeight = 960f
+        ).apply {
+            path(
+                fill = SolidColor(Color.Black),
+                fillAlpha = 1.0f,
+                stroke = null,
+                strokeAlpha = 1.0f,
+                strokeLineWidth = 1.0f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Miter,
+                strokeLineMiter = 1.0f,
+                pathFillType = PathFillType.NonZero
+            ) {
+                moveTo(440f, 880f)
+                quadToRelative(-33f, 0f, -56.5f, -23.5f)
+                reflectiveQuadTo(360f, 800f)
+                verticalLineToRelative(-160f)
+                horizontalLineTo(240f)
+                quadToRelative(-33f, 0f, -56.5f, -23.5f)
+                reflectiveQuadTo(160f, 560f)
+                verticalLineToRelative(-280f)
+                quadToRelative(0f, -66f, 47f, -113f)
+                reflectiveQuadToRelative(113f, -47f)
+                horizontalLineToRelative(480f)
+                verticalLineToRelative(440f)
+                quadToRelative(0f, 33f, -23.5f, 56.5f)
+                reflectiveQuadTo(720f, 640f)
+                horizontalLineTo(600f)
+                verticalLineToRelative(160f)
+                quadToRelative(0f, 33f, -23.5f, 56.5f)
+                reflectiveQuadTo(520f, 880f)
+                close()
+                moveTo(240f, 400f)
+                horizontalLineToRelative(480f)
+                verticalLineToRelative(-200f)
+                horizontalLineToRelative(-40f)
+                verticalLineToRelative(160f)
+                horizontalLineToRelative(-80f)
+                verticalLineToRelative(-160f)
+                horizontalLineToRelative(-40f)
+                verticalLineToRelative(80f)
+                horizontalLineToRelative(-80f)
+                verticalLineToRelative(-80f)
+                horizontalLineTo(320f)
+                quadToRelative(-33f, 0f, -56.5f, 23.5f)
+                reflectiveQuadTo(240f, 280f)
+                close()
+                moveToRelative(0f, 160f)
+                horizontalLineToRelative(480f)
+                verticalLineToRelative(-80f)
+                horizontalLineTo(240f)
+                close()
+                moveToRelative(0f, 0f)
+                verticalLineToRelative(-80f)
+                close()
+            }
+        }.build()
+        return _Format_paint!!
+    }
+
+private var _Format_paint: ImageVector? = null

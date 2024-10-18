@@ -36,8 +36,11 @@ import com.example.lasalleapp.models.BottomNavigationItem
 import com.example.lasalleapp.ui.screens.CalendarScreen
 import com.example.lasalleapp.ui.screens.GradesScreen
 import com.example.lasalleapp.ui.screens.HomeScreen
+import com.example.lasalleapp.ui.screens.MateriaDetailScreen
 import com.example.lasalleapp.ui.screens.NewsDetailScreen
+import com.example.lasalleapp.ui.screens.PasswordChangeScreen
 import com.example.lasalleapp.ui.screens.SettingsScreen
+import com.example.lasalleapp.ui.screens.ThemeChangeScreen
 import com.example.lasalleapp.ui.theme.LaSalleAppTheme
 import com.example.lasalleapp.utils.Screens
 import com.exyte.animatednavbar.AnimatedNavigationBar
@@ -64,10 +67,12 @@ class MainActivity : ComponentActivity() {
                     ) {
                         BottomNavigationItem.items.forEachIndexed { index, bottomNavigationItem ->
                             Column (
-                                modifier = Modifier.fillMaxSize().clickable {
-                                    selectedItem = index
-                                    navController.navigate(bottomNavigationItem.route)
-                                },
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .clickable {
+                                        selectedItem = index
+                                        navController.navigate(bottomNavigationItem.route)
+                                    },
                                 horizontalAlignment = Alignment.CenterHorizontally,
                                 verticalArrangement = Arrangement.Center
                             ){
@@ -92,13 +97,13 @@ class MainActivity : ComponentActivity() {
                             HomeScreen(innerPadding = innerPadding, navController = navController)
                         }
                         composable(route = Screens.Grades.route) {
-                            GradesScreen(innerPadding = innerPadding)
+                            GradesScreen(innerPadding = innerPadding, navController)
                         }
                         composable(route = Screens.Calendar.route) {
                             CalendarScreen(innerPadding = innerPadding)
                         }
                         composable(route = Screens.Settings.route) {
-                            SettingsScreen(innerPadding = innerPadding)
+                            SettingsScreen(innerPadding = innerPadding, navController)
                         }
                         composable(
                             route = Screens.NewsDetail.route+"/{newsId}",
@@ -110,6 +115,15 @@ class MainActivity : ComponentActivity() {
                         ) {
                             val newsId = it.arguments?.getInt("newsId") ?: 0
                             NewsDetailScreen(innerPadding = innerPadding, newsId = newsId)
+                        }
+                        composable(route = Screens.MateriaDetail.route){
+                            MateriaDetailScreen()
+                        }
+                        composable(route = Screens.PasswordChange.route){
+                            PasswordChangeScreen(paddingValues = innerPadding)
+                        }
+                        composable(route = Screens.ThemeChange.route){
+                            ThemeChangeScreen(paddingValues = innerPadding)
                         }
                     }
                 }
