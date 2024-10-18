@@ -34,15 +34,15 @@ val communities = listOf(
 )
 
 val materias = listOf(
-    Materia(1, "Matematicas", 9.6, 10.0, 10.0, 10.0),
-    Materia(2, "Quimica", 9.8, 10.0, 9.5, 10.0),
-    Materia(3, "Fisica", 10.0, 10.0, 10.0, 10.0),
-    Materia(4, "Geografia", 9.7, 9.9, 9.8, 10.0),
-    Materia(5, "Historia", 6.9, 6.4, 8.1, 8.0),
-    Materia(6, "Español", 9.7, 9.5, 10.0, 10.0),
-    Materia(7, "Civica y Etica", 7.5, 9.8, 9.4, 9.0),
-    Materia(8, "Ingles", 9.0, 8.6, 8.3, 9.0),
-    Materia(9, "Frances", 10.0, 10.0, 10.0, 10.0),
-    Materia(10, "Calculo", 9.5, 9.4, 10.0, 10.0),
+    Materia(1, "Matematicas", 9.6, 10.0, 10.0, 10.0, "Luis Miguel Lugo Martínez"),
+    Materia(2, "Quimica", 9.8, 10.0, 9.5, 10.0, "Laura Paulina Badillo Canchola"),
+    Materia(3, "Fisica", 5.0, 5.0, 5.0, 5.0, "Josué Edgar Caro Flores"),
+    Materia(4, "Geografia", 9.7, 9.9, 9.8, 10.0, "Luis Enríque Cuellar Vivia"),
+    Materia(5, "Historia", 6.9, 6.4, 8.1, 8.0, "Francisco Barrón Macías"),
+    Materia(6, "Español", 9.7, 9.5, 10.0, 10.0, "Andrea Regalado Páramo"),
+    Materia(7, "Civica y Etica", 7.5, 9.8, 9.4, 9.0, "Franca Luz López Rodríguez"),
+    Materia(8, "Ingles", 6.0, 6.0, 5.9, 5.9, "Israel Milton Vázquez Flores"),
+    Materia(9, "Frances", 10.0, 10.0, 10.0, 10.0, "Georgina Adalberta Cruz Hernández"),
+    Materia(10, "Calculo", 9.5, 9.4, 10.0, 10.0, "Ricardo Miguel Sánchez Durán"),
 )
 

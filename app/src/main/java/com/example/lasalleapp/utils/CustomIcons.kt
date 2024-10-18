@@ -322,3 +322,134 @@ public val Format_paint: ImageVector
     }
 
 private var _Format_paint: ImageVector? = null
+
+public val Check_circle: ImageVector
+    get() {
+        if (_Check_circle != null) {
+            return _Check_circle!!
+        }
+        _Check_circle = ImageVector.Builder(
+            name = "Check_circle",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 960f,
+            viewportHeight = 960f
+        ).apply {
+            path(
+                fill = SolidColor(Color.Black),
+                fillAlpha = 1.0f,
+                stroke = null,
+                strokeAlpha = 1.0f,
+                strokeLineWidth = 1.0f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Miter,
+                strokeLineMiter = 1.0f,
+                pathFillType = PathFillType.NonZero
+            ) {
+                moveTo(424f, 664f)
+                lineToRelative(282f, -282f)
+                lineToRelative(-56f, -56f)
+                lineToRelative(-226f, 226f)
+                lineToRelative(-114f, -114f)
+                lineToRelative(-56f, 56f)
+                close()
+                moveToRelative(56f, 216f)
+                quadToRelative(-83f, 0f, -156f, -31.5f)
+                reflectiveQuadTo(197f, 763f)
+                reflectiveQuadToRelative(-85.5f, -127f)
+                reflectiveQuadTo(80f, 480f)
+                reflectiveQuadToRelative(31.5f, -156f)
+                reflectiveQuadTo(197f, 197f)
+                reflectiveQuadToRelative(127f, -85.5f)
+                reflectiveQuadTo(480f, 80f)
+                reflectiveQuadToRelative(156f, 31.5f)
+                reflectiveQuadTo(763f, 197f)
+                reflectiveQuadToRelative(85.5f, 127f)
+                reflectiveQuadTo(880f, 480f)
+                reflectiveQuadToRelative(-31.5f, 156f)
+                reflectiveQuadTo(763f, 763f)
+                reflectiveQuadToRelative(-127f, 85.5f)
+                reflectiveQuadTo(480f, 880f)
+                moveToRelative(0f, -80f)
+                quadToRelative(134f, 0f, 227f, -93f)
+                reflectiveQuadToRelative(93f, -227f)
+                reflectiveQuadToRelative(-93f, -227f)
+                reflectiveQuadToRelative(-227f, -93f)
+                reflectiveQuadToRelative(-227f, 93f)
+                reflectiveQuadToRelative(-93f, 227f)
+                reflectiveQuadToRelative(93f, 227f)
+                reflectiveQuadToRelative(227f, 93f)
+                moveToRelative(0f, -320f)
+            }
+        }.build()
+        return _Check_circle!!
+    }
+
+private var _Check_circle: ImageVector? = null
+
+
+public val ErrorIcon: ImageVector
+    get() {
+        if (_Error != null) {
+            return _Error!!
+        }
+        _Error = ImageVector.Builder(
+            name = "Error",
+            defaultWidth = 16.dp,
+            defaultHeight = 16.dp,
+            viewportWidth = 16f,
+            viewportHeight = 16f
+        ).apply {
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+                fillAlpha = 1.0f,
+                stroke = null,
+                strokeAlpha = 1.0f,
+                strokeLineWidth = 1.0f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Miter,
+                strokeLineMiter = 1.0f,
+                pathFillType = PathFillType.EvenOdd
+            ) {
+                moveTo(8.6f, 1f)
+                curveToRelative(1.6f, 0.1f, 3.1f, 0.9f, 4.2f, 2f)
+                curveToRelative(1.3f, 1.4f, 2f, 3.1f, 2f, 5.1f)
+                curveToRelative(0f, 1.6f, -0.6f, 3.1f, -1.6f, 4.4f)
+                curveToRelative(-1f, 1.2f, -2.4f, 2.1f, -4f, 2.4f)
+                curveToRelative(-1.6f, 0.3f, -3.2f, 0.1f, -4.6f, -0.7f)
+                curveToRelative(-1.4f, -0.8f, -2.5f, -2f, -3.1f, -3.5f)
+                curveTo(0.9f, 9.2f, 0.8f, 7.5f, 1.3f, 6f)
+                curveToRelative(0.5f, -1.6f, 1.4f, -2.9f, 2.8f, -3.8f)
+                curveTo(5.4f, 1.3f, 7f, 0.9f, 8.6f, 1f)
+                close()
+                moveToRelative(0.5f, 12.9f)
+                curveToRelative(1.3f, -0.3f, 2.5f, -1f, 3.4f, -2.1f)
+                curveToRelative(0.8f, -1.1f, 1.3f, -2.4f, 1.2f, -3.8f)
+                curveToRelative(0f, -1.6f, -0.6f, -3.2f, -1.7f, -4.3f)
+                curveToRelative(-1f, -1f, -2.2f, -1.6f, -3.6f, -1.7f)
+                curveToRelative(-1.3f, -0.1f, -2.7f, 0.2f, -3.8f, 1f)
+                curveToRelative(-1.1f, 0.8f, -1.9f, 1.9f, -2.3f, 3.3f)
+                curveToRelative(-0.4f, 1.3f, -0.4f, 2.7f, 0.2f, 4f)
+                curveToRelative(0.6f, 1.3f, 1.5f, 2.3f, 2.7f, 3f)
+                curveToRelative(1.2f, 0.7f, 2.6f, 0.9f, 3.9f, 0.6f)
+                close()
+                moveTo(7.9f, 7.5f)
+                lineTo(10.3f, 5f)
+                lineToRelative(0.7f, 0.7f)
+                lineToRelative(-2.4f, 2.5f)
+                lineToRelative(2.4f, 2.5f)
+                lineToRelative(-0.7f, 0.7f)
+                lineToRelative(-2.4f, -2.5f)
+                lineToRelative(-2.4f, 2.5f)
+                lineToRelative(-0.7f, -0.7f)
+                lineToRelative(2.4f, -2.5f)
+                lineToRelative(-2.4f, -2.5f)
+                lineToRelative(0.7f, -0.7f)
+                lineToRelative(2.4f, 2.5f)
+                close()
+            }
+        }.build()
+        return _Error!!
+    }
+
+private var _Error: ImageVector? = null

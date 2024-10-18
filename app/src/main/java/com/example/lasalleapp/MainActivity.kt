@@ -101,7 +101,7 @@ class MainActivity : ComponentActivity() {
                             GradesScreen(innerPadding = innerPadding, navController)
                         }
                         composable(route = Screens.Calendar.route) {
-                            CalendarScreen(innerPadding = innerPadding)
+                            CalendarScreen(paddingValues = innerPadding)
                         }
                         composable(route = Screens.Settings.route) {
                             SettingsScreen(innerPadding = innerPadding, navController)

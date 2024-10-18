@@ -6,5 +6,6 @@ data class Materia (
     val cal1P: Double,
     val cal2P: Double,
     val cal3P: Double,
-    val promedio: Double
+    val promedio: Double,
+    val maestro: String
 )
