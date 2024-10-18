@@ -1,5 +1,6 @@
 package com.example.lasalleapp.utils
 
+import com.example.lasalleapp.models.Colegiatura
 import com.example.lasalleapp.models.Community
 import com.example.lasalleapp.models.Materia
 import com.example.lasalleapp.models.News
@@ -44,5 +45,19 @@ val materias = listOf(
     Materia(8, "Ingles", 6.0, 6.0, 5.9, 5.9, "Israel Milton Vázquez Flores"),
     Materia(9, "Frances", 10.0, 10.0, 10.0, 10.0, "Georgina Adalberta Cruz Hernández"),
     Materia(10, "Calculo", 9.5, 9.4, 10.0, 10.0, "Ricardo Miguel Sánchez Durán"),
+)
+
+val pagos = listOf(
+    Colegiatura(1, "Enero", 2024, true),
+    Colegiatura(2, "Febrero", 2024, true),
+    Colegiatura(3, "Marzo", 2024, true),
+    Colegiatura(4, "Abril", 2024, true),
+    Colegiatura(5, "Mayo", 2024, true),
+    Colegiatura(6, "Junio", 2024, true),
+    Colegiatura(7, "Julio", 2024, true),
+    Colegiatura(8, "Agosto", 2024, true),
+    Colegiatura(9, "Septiembre", 2024, true),
+    Colegiatura(10, "Octubre", 2024, true),
+    Colegiatura(11, "Noviembre", 2024, false)
 )
 
