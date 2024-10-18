@@ -3,6 +3,7 @@ package com.example.lasalleapp.ui.screens
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -121,7 +122,9 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController){
             ){
                 Widget(icon = Icons.Default.DateRange, title = "Sin eventos")
                 Widget(icon = Task, title = "2 tareas")
-                Widget(icon = CashCoin, title = "Pagos")
+                Widget(icon = CashCoin, title = "Pagos", isClickable = true){
+                    navController.navigate(Screens.Pagos.route)
+                }
             }
         }
         //Body

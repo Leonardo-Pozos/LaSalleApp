@@ -38,6 +38,7 @@ import com.example.lasalleapp.ui.screens.GradesScreen
 import com.example.lasalleapp.ui.screens.HomeScreen
 import com.example.lasalleapp.ui.screens.MateriaDetailScreen
 import com.example.lasalleapp.ui.screens.NewsDetailScreen
+import com.example.lasalleapp.ui.screens.PagosScreen
 import com.example.lasalleapp.ui.screens.PasswordChangeScreen
 import com.example.lasalleapp.ui.screens.SettingsScreen
 import com.example.lasalleapp.ui.screens.ThemeChangeScreen
@@ -116,14 +117,25 @@ class MainActivity : ComponentActivity() {
                             val newsId = it.arguments?.getInt("newsId") ?: 0
                             NewsDetailScreen(innerPadding = innerPadding, newsId = newsId)
                         }
-                        composable(route = Screens.MateriaDetail.route){
-                            MateriaDetailScreen()
+                        composable(
+                            route = Screens.MateriaDetail.route+"/{materiaId}",
+                            arguments = listOf(
+                                navArgument("materiaId"){
+                                    type = NavType.IntType
+                                }
+                            )
+                        ){
+                            val materiaId = it.arguments?.getInt("materiaId") ?: 0
+                            MateriaDetailScreen(innerPadding, materiaId)
                         }
                         composable(route = Screens.PasswordChange.route){
                             PasswordChangeScreen(paddingValues = innerPadding)
                         }
                         composable(route = Screens.ThemeChange.route){
                             ThemeChangeScreen(paddingValues = innerPadding)
+                        }
+                        composable(route = Screens.Pagos.route){
+                            PagosScreen(paddingValues = innerPadding)
                         }
                     }
                 }

@@ -25,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -57,19 +58,24 @@ fun SettingsScreen(innerPadding : PaddingValues, navController: NavController){
                     .padding(start = 10.dp)
             )
         }
-        Box(modifier = Modifier
-            .size(200.dp)
-            .clip(CircleShape) // Aplica el CircleShape al Box para redondear completamente
+        Box(
+            modifier = Modifier
+                .padding(top = 30.dp)
+                .size(200.dp)
+                .clip(CircleShape) // Aplica la forma circular al Box
+                .background(Color.Gray), // Color de fondo en caso de que la imagen no sea cuadrada
+            contentAlignment = Alignment.Center // Alinea la imagen al centro del Box
         ) {
             Image(
                 painter = painterResource(id = R.drawable.elbichofoto),
                 contentDescription = "foto_alumno",
+                contentScale = ContentScale.Crop, // Recorta la imagen para que encaje en el círculo sin distorsionarse
                 modifier = Modifier
-                    .padding(top = 20.dp, bottom = 20.dp)
                     .size(200.dp)
-                    .clip(CircleShape) // También se asegura que la imagen sea circular
+                    .clip(CircleShape) // Aplica el recorte circular a la imagen
             )
         }
+
 
         Text(
             text = "Leonardo Pozos Reyes",

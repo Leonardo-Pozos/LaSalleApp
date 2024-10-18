@@ -34,10 +34,15 @@ val communities = listOf(
 )
 
 val materias = listOf(
-    Materia(1, "Matematicas", 9.3, 9.5, 8.8, 9.9),
-    Materia(2, "Quimica", 9.3, 9.5, 8.8, 9.7),
-    Materia(3, "Fisica", 9.3, 9.5, 8.8, 8.9),
-    Materia(4, "Geografia", 9.3, 9.5, 8.8, 9.5),
-    Materia(5, "Historia", 9.3, 9.5, 8.8, 9.5),
+    Materia(1, "Matematicas", 9.6, 10.0, 10.0, 10.0),
+    Materia(2, "Quimica", 9.8, 10.0, 9.5, 10.0),
+    Materia(3, "Fisica", 10.0, 10.0, 10.0, 10.0),
+    Materia(4, "Geografia", 9.7, 9.9, 9.8, 10.0),
+    Materia(5, "Historia", 6.9, 6.4, 8.1, 8.0),
+    Materia(6, "Español", 9.7, 9.5, 10.0, 10.0),
+    Materia(7, "Civica y Etica", 7.5, 9.8, 9.4, 9.0),
+    Materia(8, "Ingles", 9.0, 8.6, 8.3, 9.0),
+    Materia(9, "Frances", 10.0, 10.0, 10.0, 10.0),
+    Materia(10, "Calculo", 9.5, 9.4, 10.0, 10.0),
 )
 

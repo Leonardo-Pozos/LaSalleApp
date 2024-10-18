@@ -1,6 +1,7 @@
 package com.example.lasalleapp.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
@@ -21,12 +22,15 @@ import androidx.compose.ui.unit.dp
 import com.example.lasalleapp.ui.theme.LaSalleAppTheme
 
 @Composable
-fun Widget(icon: ImageVector, title: String){
+fun Widget(icon: ImageVector, title: String, isClickable: Boolean = false, onClick: () -> Unit = {}){
     Box(
         modifier = Modifier
             .clip(RoundedCornerShape(10.dp))
             .size(90.dp)
-            .background(MaterialTheme.colorScheme.background),
+            .background(MaterialTheme.colorScheme.background)
+            .let{
+                if (isClickable) it.clickable(onClick = onClick) else it
+            },
         contentAlignment = Alignment.Center
     ){
         Column(
@@ -39,13 +43,5 @@ fun Widget(icon: ImageVector, title: String){
             Text(text = title, color = MaterialTheme.colorScheme.primary,
                 style = MaterialTheme.typography.bodySmall)
         }
-    }
-}
-
-@Preview
-@Composable
-fun WidgetPreview(){
-    LaSalleAppTheme{
-        Widget(Icons.Default.Home, "Hola")
     }
 }

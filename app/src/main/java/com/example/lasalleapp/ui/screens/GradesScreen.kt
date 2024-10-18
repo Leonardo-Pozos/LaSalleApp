@@ -67,19 +67,22 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
                     "Leonardo Pozos Reyes",
                     modifier = Modifier.padding(start = 15.dp, end = 15.dp, top = 5.dp),
                     style = MaterialTheme.typography.titleSmall,
+                    fontSize = 25.sp
+                )
+                Text(
+                    "Carrera: Ingeniería de Software",
+                    modifier = Modifier.padding(start = 15.dp, end = 15.dp, top = 15.dp),
                     fontSize = 20.sp
                 )
                 Text(
-                    "Carrera: Ingenieria de Software",
-                    modifier = Modifier.padding(start = 15.dp, end = 15.dp, top = 15.dp)
-                )
-                Text(
                     "Semestre: 5to Semestre",
-                    modifier = Modifier.padding(start = 15.dp, end = 15.dp, top = 15.dp)
+                    modifier = Modifier.padding(start = 15.dp, end = 15.dp, top = 15.dp),
+                    fontSize = 20.sp
                 )
                 Text(
-                    text = "Promedio: 9.7",
-                    modifier = Modifier.padding(start = 15.dp, top = 15.dp)
+                    text = "Promedio: 9.6",
+                    modifier = Modifier.padding(start = 15.dp, top = 15.dp),
+                    fontSize = 20.sp
                 )
             }
         }
@@ -103,7 +106,7 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
         ) {
             items(materias) { materia ->
                 Row(
-                    modifier = Modifier.clickable { navController.navigate(Screens.MateriaDetail.route) }
+                    modifier = Modifier.clickable { navController.navigate(Screens.MateriaDetail.route + "/${materia.id}") }
                 ) {
                     Text(
                         text = materia.nombre,
