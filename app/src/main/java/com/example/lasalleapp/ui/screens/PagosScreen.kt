@@ -2,6 +2,7 @@ package com.example.lasalleapp.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,6 +16,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -32,14 +34,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.lasalleapp.R
 import com.example.lasalleapp.ui.theme.LaSalleAppTheme
 import com.example.lasalleapp.utils.Check_circle
 import com.example.lasalleapp.utils.ErrorIcon
+import com.example.lasalleapp.utils.Screens
 import com.example.lasalleapp.utils.pagos
 
 @Composable
-fun PagosScreen(paddingValues: PaddingValues){
+fun PagosScreen(paddingValues: PaddingValues, navController: NavController){
     Column (
         modifier = Modifier
             .fillMaxSize()
@@ -58,7 +62,7 @@ fun PagosScreen(paddingValues: PaddingValues){
             )
         }
         Text(
-            text = "COLEGIATURAS",
+            text = "PAGOS",
             style = MaterialTheme.typography.titleMedium,
             fontSize = 30.sp,
             modifier = Modifier
@@ -66,7 +70,7 @@ fun PagosScreen(paddingValues: PaddingValues){
                 .align(Alignment.CenterHorizontally),
             textAlign = TextAlign.Center
         )
-        LazyColumn (
+        LazyColumn(
             modifier = Modifier
                 .fillMaxHeight()
                 .padding(top = 10.dp)
@@ -78,53 +82,73 @@ fun PagosScreen(paddingValues: PaddingValues){
                         .padding(horizontal = 24.dp, vertical = 8.dp)
                         .clip(RoundedCornerShape(16.dp))
                         .background(MaterialTheme.colorScheme.onPrimary)
-                        .height(70.dp),
+                        .height(120.dp)
+                        .clickable { navController.navigate(Screens.PagoDetail.route+"/${pago.id}") },
                     contentAlignment = Alignment.Center
                 ){
                     Row {
-                        if(pago.pago){
-                            Image(
-                                imageVector = Check_circle,
-                                contentDescription = "lock",
-                                modifier = Modifier
-                                    .padding(end = 5.dp)
-                                    .size(40.dp),
-                                colorFilter = ColorFilter.tint(Color.Green)
-                            )
-                        }else{
-                            Image(
-                                imageVector = ErrorIcon,
-                                contentDescription = "lock",
-                                modifier = Modifier
-                                    .padding(end = 5.dp)
-                                    .size(40.dp),
-                                colorFilter = ColorFilter.tint(Color.Red)
+                        Column(
+                            modifier = Modifier.weight(0.2f),
+                            verticalArrangement = Arrangement.Center,
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(text = "ESTATUS")
+                            if (pago.pago) {
+                                Image(
+                                    imageVector = Check_circle,
+                                    contentDescription = "lock",
+                                    modifier = Modifier
+                                        .padding(end = 5.dp)
+                                        .size(40.dp),
+                                    colorFilter = ColorFilter.tint(Color.Green)
+                                )
+                            } else {
+                                Image(
+                                    imageVector = ErrorIcon,
+                                    contentDescription = "lock",
+                                    modifier = Modifier
+                                        .padding(end = 5.dp)
+                                        .size(40.dp),
+                                    colorFilter = ColorFilter.tint(Color.Red)
+                                )
+                            }
+                        }
+
+                        Column(
+                            modifier = Modifier.weight(0.2f),
+                            verticalArrangement = Arrangement.Center,
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(text = "PERIODO")
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Text(
+                                    text = pago.mes,
+                                    fontSize = 20.sp
+                                )
+                                Text(
+                                    text = pago.ano.toString(),
+                                    fontSize = 20.sp
+                                )
+                            }
+                        }
+
+                        Column(
+                            modifier = Modifier.weight(0.2f),
+                            verticalArrangement = Arrangement.Center,
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(text = "MONTO")
+                            Text(
+                                "$" + pago.monto.toString(),
+                                fontSize = 20.sp
                             )
                         }
-                        Text(
-                            text = pago.mes,
-                            fontSize = 20.sp,
-                            modifier = Modifier.align(Alignment.CenterVertically)
-                        )
-                        Text(
-                            text = pago.ano.toString(),
-                            fontSize = 20.sp,
-                            modifier = Modifier.align(Alignment.CenterVertically).padding(start = 6.dp)
-                        )
                     }
+
                 }
             }
         }
-    }
-}
-
-@Preview(
-    showBackground = true,
-    showSystemUi = true
-)
-@Composable
-fun PagosScreenPreview(){
-    LaSalleAppTheme {
-        PagosScreen(paddingValues = PaddingValues(0.dp))
     }
 }

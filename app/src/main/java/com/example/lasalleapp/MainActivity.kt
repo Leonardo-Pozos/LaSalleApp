@@ -38,6 +38,7 @@ import com.example.lasalleapp.ui.screens.GradesScreen
 import com.example.lasalleapp.ui.screens.HomeScreen
 import com.example.lasalleapp.ui.screens.MateriaDetailScreen
 import com.example.lasalleapp.ui.screens.NewsDetailScreen
+import com.example.lasalleapp.ui.screens.PagoDetailScreen
 import com.example.lasalleapp.ui.screens.PagosScreen
 import com.example.lasalleapp.ui.screens.PasswordChangeScreen
 import com.example.lasalleapp.ui.screens.SettingsScreen
@@ -135,7 +136,18 @@ class MainActivity : ComponentActivity() {
                             ThemeChangeScreen(paddingValues = innerPadding)
                         }
                         composable(route = Screens.Pagos.route){
-                            PagosScreen(paddingValues = innerPadding)
+                            PagosScreen(paddingValues = innerPadding, navController)
+                        }
+                        composable(
+                            route = Screens.PagoDetail.route+"/{pagoId}",
+                            arguments = listOf(
+                                navArgument("pagoId"){
+                                    type = NavType.IntType
+                                }
+                            )
+                        ){
+                            val pagoId = it.arguments?.getInt("pagoId") ?: 0
+                            PagoDetailScreen(paddingValues = innerPadding, pagoId)
                         }
                     }
                 }

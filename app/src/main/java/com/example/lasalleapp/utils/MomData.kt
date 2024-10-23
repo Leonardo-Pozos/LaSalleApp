@@ -48,16 +48,18 @@ val materias = listOf(
 )
 
 val pagos = listOf(
-    Colegiatura(1, "Enero", 2024, true),
-    Colegiatura(2, "Febrero", 2024, true),
-    Colegiatura(3, "Marzo", 2024, true),
-    Colegiatura(4, "Abril", 2024, true),
-    Colegiatura(5, "Mayo", 2024, true),
-    Colegiatura(6, "Junio", 2024, true),
-    Colegiatura(7, "Julio", 2024, true),
-    Colegiatura(8, "Agosto", 2024, true),
-    Colegiatura(9, "Septiembre", 2024, true),
-    Colegiatura(10, "Octubre", 2024, true),
-    Colegiatura(11, "Noviembre", 2024, false)
+    Colegiatura(1, "Enero", 2024, true, 10543, "31/01/2024"),
+    Colegiatura(2, "Febrero", 2024, true, 10543, "28/02/2024"),
+    Colegiatura(3, "Marzo", 2024, true, 10543, "31/03/2024"),
+    Colegiatura(4, "Abril", 2024, true, 10543, "30/04/2024"),
+    Colegiatura(5, "Mayo", 2024, true, 10543, "31/05/2024"),
+    Colegiatura(6, "Junio", 2024, true, 10543, "30/06/2024"),
+    Colegiatura(7, "Julio", 2024, true, 10543, "31/07/2024"),
+    Colegiatura(8, "Agosto", 2024, true, 10543, "31/08/2024"),
+    Colegiatura(9, "Septiembre", 2024, true, 10543, "30/09/2024"),
+    Colegiatura(10, "Octubre", 2024, true, 10543, "31/10/2024"),
+    Colegiatura(11, "Noviembre", 2024, false, 10543, "30/11/2024"),
+    Colegiatura(12, "Diciembre", 2024, false, 10543, "31/12/2024")
 )
+
 

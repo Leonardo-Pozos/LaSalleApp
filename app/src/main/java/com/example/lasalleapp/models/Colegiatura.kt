@@ -4,5 +4,7 @@ data class Colegiatura(
     val id: Int,
     val mes: String,
     val ano: Int,
-    val pago: Boolean
+    val pago: Boolean,
+    val monto: Int,
+    val ultimoDiaParaPagar: String
 )

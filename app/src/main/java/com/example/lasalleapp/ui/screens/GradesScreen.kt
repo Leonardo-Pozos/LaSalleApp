@@ -106,7 +106,7 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
         ) {
             items(materias) { materia ->
                 Row(
-                    modifier = Modifier.clickable { navController.navigate(Screens.MateriaDetail.route + "/${materia.id}") }
+                    modifier = Modifier.clickable { navController.navigate(Screens.MateriaDetail.route+"/${materia.id}") }
                 ) {
                     Text(
                         text = materia.nombre,
